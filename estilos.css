@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  font-family: sans-serif;
+  height: 100vh;
+  color: white;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "header"
+    "izquierda"
+    "contenido"
+    "derecha"
+    "footer";
+}
+
+@media (min-width: 500px) {
+  .container {
+    grid-template-areas: 
+     "header contenido derecha"
+     "izquierda centro derecha"
+     "footer abajo derecha"
+  }
+}
+
+.primero {
+  grid-area: header;
+  background-color: #F90C2C;
+}
+
+.segundo {
+  grid-area: contenido;
+  background-color: white;
+  padding: 50px 20px;
+}
+
+.tercero {
+  grid-area: derecha;
+  background: yellow;
+  height: 100%;
+  background-size: cover; /* <-- background size */
+  background-position: center; /* <-- background position */
+  background-image: url(images/assets_1.jpg);
+}
+
+.cuarto {
+  grid-area: centro;
+  background-color: #F90C2C;
+  padding: 50px 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.quinto {
+  grid-area: izquierda;
+  background-color: white;
+  height: 100%;
+  background-size: cover; /* <-- background size */
+  background-position: center; /* <-- background position */
+  background-image: url(images/assets_2.jpg);
+}
+
+.sexto {
+  grid-area: footer;
+  background-color: #F90C2C;
+}
+
+.septimo {
+  grid-area: abajo;
+  background-color: white;
+  height: 100%;
+  background-size: cover; /* <-- background size */
+  background-position: center; /* <-- background position */
+  background-image: url(images/assets_3.jpg);
+}
+
+.segundo input {
+  margin: auto;
+  margin-bottom: 10px;
+  display: block;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.segundo input[type=submit] {
+  padding: 3px;
+  width: 50%;
+  color: white;
+  cursor: pointer;
+  background-color: #F90C2C;
+  border: none;
+  border-radius: 4px;
+}
+
+input[type=submit]:hover {
+  background-color: #740413;
+}
