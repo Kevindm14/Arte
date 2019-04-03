@@ -1,5 +1,7 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
@@ -20,58 +22,53 @@ body {
 @media (min-width: 500px) {
   .container {
     grid-template-areas: 
-     "header contenido derecha"
-     "izquierda centro derecha"
-     "footer abajo derecha"
+     "primero segundo tercero"
+     "cuarto quinto tercero"
+     "sexto septimo tercero"
   }
 }
 
 .primero {
-  grid-area: header;
+  grid-area: primero;
   background-color: #F90C2C;
 }
 
 .segundo {
-  grid-area: contenido;
+  grid-area: segundo;
   background-color: white;
-  padding: 50px 20px;
+  padding: 50px;
 }
 
 .tercero {
-  grid-area: derecha;
-  background: yellow;
-  height: 100%;
+  grid-area: tercero;
   background-size: cover; /* <-- background size */
   background-position: center; /* <-- background position */
   background-image: url(images/assets_1.jpg);
 }
 
 .cuarto {
-  grid-area: centro;
-  background-color: #F90C2C;
-  padding: 50px 10px;
-  text-align: center;
-  font-size: 20px;
-}
-
-.quinto {
-  grid-area: izquierda;
-  background-color: white;
-  height: 100%;
+  grid-area: cuarto;
   background-size: cover; /* <-- background size */
   background-position: center; /* <-- background position */
   background-image: url(images/assets_2.jpg);
 }
 
+.quinto {
+  grid-area: quinto;
+  background-color: #F90C2C;
+  text-align: center;
+  padding: 50px;
+  font-size: 40px;
+}
+
 .sexto {
-  grid-area: footer;
+  grid-area: sexto;
   background-color: #F90C2C;
 }
 
 .septimo {
-  grid-area: abajo;
+  grid-area: septimo;
   background-color: white;
-  height: 100%;
   background-size: cover; /* <-- background size */
   background-position: center; /* <-- background position */
   background-image: url(images/assets_3.jpg);
@@ -81,22 +78,29 @@ body {
   margin: auto;
   margin-bottom: 10px;
   display: block;
-  padding: 3px;
+  padding: 4px;
   border: 1px solid #ccc;
   border-radius: 2px;
   box-sizing: border-box;
 }
 
+.segundo input[type=text] {
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
 .segundo input[type=submit] {
-  padding: 3px;
+  padding: 6px;
   width: 50%;
   color: white;
   cursor: pointer;
   background-color: #F90C2C;
   border: none;
   border-radius: 4px;
+  transition: 0.4s;
 }
 
 input[type=submit]:hover {
   background-color: #740413;
+  width: 60%;
 }
